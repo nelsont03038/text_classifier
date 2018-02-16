@@ -1,0 +1,23 @@
+To test the classifier trained on the restaurant review sentiment data, try text like this:
+
+positive = the "positive" class means the sentiment is positive
+"The food was great.  The waiter was awesome, the desert is the best."
+"Simply amazing!  The food was great, the waitress was friendly."
+
+negative = the "negative" class means the sentiment is negative
+"The food here was awful, I hated it.  I'll never go back again!"
+"The waiter was rude.  The food was cold.  The atmosphere was boring."
+
+
+To test the classifier trained on the spooky author data, try text like this:
+
+HP Lovecraft
+"Once when the wind was soft and scented I heard the south calling, and sailed endlessly and languorously under strange stars." 
+
+Edgar Allen Poe
+"Presently my soul grew stronger; hesitating then no longer,  “Sir,” said I, “or Madam, truly your forgiveness I implore;"
+
+Mary W Shelley
+"The rain was pouring in torrents, and thick mists hid the summits of the mountains, so that I even saw not the faces of those mighty friends." 
+
+

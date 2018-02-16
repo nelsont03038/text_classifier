@@ -1,0 +1,56 @@
+Documentation
+
+Please see the README.txt file to install the necessary packages and set up the 
+application.
+
+There are 2 parts to this project.  One is a python source code file, research.py, 
+that was used for development of the machine learning methods.  The second is the 
+web application that implements the model using a simple web interface.
+
+Several models were studied including random forest, support vector machines, and 
+naive Bayes (among others not shown).  This research phase can be seen in the file 
+named "research.py."  The final approach chosen was a simple multinomial naive Bayes 
+classifier.  And that was implemented in the web application.  Naive Bayes seemed to 
+perform the best on the example data sets.  NB is well known for use in text classification 
+problems.  It was also by far the fastest to train.  So the Naive Bayes method was 
+ultimately chosen for accuracy, speed and simplicity of implementation.
+
+Included are 2 example data sets to use to test the application.  One is a small data set
+that contains restaurant reviews.  The labels are describing the overall sentiment of the 
+review as either "positive" or "negative".  This set is included because it trains in a couple
+of seconds.  The second data set is from a Kaggle competition called "Spooky Author Identification".  
+https://www.kaggle.com/c/spooky-author-identification
+The data are excerpts (small fragments of test) from each of the author's works.  The label 
+is simply the author's name (HP Lovecraft, Edgar Allen Poe and Mary W Shelley) .  The 
+file contains about 20,000 data points, so will take a few minutes to train.
+
+Also included is a file called "suggested_phrases.txt" that contains some phrases that you might 
+try with each of the trained models.  The phrases are not in the training data, and might 
+save you some time if you don't want to look for text passages from each of the authors or think up 
+your own restaurant reviews.
+
+The web app was developed using the Django Python web development framework.  The implementation 
+is simple, portable and lets the user upload and train their data set, then classify arbitrary
+text by submitting it by a form.
+
+Files included in the project:
+
+README.txt - installation and setup information
+requirements.txt - file for simple installation of needed python packages
+documentation.txt - this file
+restaurant_reviews_sentiment_train.txt - the restaurant review sentiment analysis training data
+spooky_authors_train.txt - the "spooky author identification" training data
+suggested_phrases.txt - file containing phrases that can be used to test the application
+stc_project - this is a directory containing the Django web application
+research.py - this is the python source code used for the research phase
+
+Within the stc_project directory, there are several files that make up the Django web
+application.  The important one if you want to look at the implementation is the
+views.py file.  That contains the nuts and bolts of the application implementation.
+
+The research.py file with the source code from the research is best run in an interactive
+Python session.  Bocks of code should be run as opposed to running the whole thing as
+a script.  It should be self explanatory and well documented.
+
+Please contact me at tcnelson@protonmail.com or call me at 609-462-6919 if you 
+have any questions.

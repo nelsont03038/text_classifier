@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Simple Text Classifier</title>
+  </head>
+  <body>
+
+  <div class='container'>
+    <h3>Simple Text Classifier</h3>
+    <p><p><p>
+    This application allows you to upload your labeled training data and train
+    a text classification model.  After model training, you will be presented with
+    relevant model training performance metrics.  You will also be able to use the
+    model to classify arbitrary text that you enter in a form.  Under the hood, the
+    application uses a multinomial Naive Bayes classifier.
+    <p><p><p>
+    The training data needs to be formatted as a tab delimited text file
+    where both label_i and text_i are arbitrary text like this:
+    <p><p><p>
+    label_1 \t text_1 \n<br>
+    label_2 \t text_2 \n<br>
+    …<br>
+    label_n \t text_3 \n<br>
+  </div>
+<p><p><p><p><p><p>
+  <div class='container'>
+  <h3>Upload the training data</h3>
+  Only click "Train Model" once.  Processing could take a long time on a large dataset.
+  Small data sets (about 1000 lines of text such as the restaurant review sentiment
+  analysis sample data) take a few seconds to process.  Larger data sets (tens of thousands
+  of lines of text such as the spooky author classification sample data) take a few
+  minutes to process.
+  <p><p><p>
+  <form method="POST" enctype="multipart/form-data" action="{% url 'result' %}" >
+	<input type="file" name="fileName" required="true"/>
+	<p><p><p>
+	<input type="submit" value="Train Model"/>
+	</form>
+  </div>
+
+  </body>
+</html>

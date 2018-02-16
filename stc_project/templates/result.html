@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+      table, th, tr, td {
+        border: 1px solid black;
+      }
+    </style>
+	<title>Results</title>
+  </head>
+
+  <body>
+  <div class='container'>
+    <h3>Results of model training</h3>
+    <table width="80%">
+      <tr><td width="20%">File Name</td><td width="60%">{{ fileName }}</td</tr>
+      <tr><td>Labels in the data</td><td>{{ label_set }}</td</tr>
+      <tr><td>Counts of each label</td><td>{{ count }}</td</tr>
+      <tr><td>Model</td><td>{{ clf }}</td</tr>
+      <tr><td>Accuracy</td><td>{{ accuracy }}</td</tr>
+      <tr><td>Precision</td><td>{{ precision }}</td</tr>
+      <tr><td>Recall</td><td>{{ recall }}</td</tr>
+    </table>
+  </div>
+  <p><p><p><p><p><p>
+
+  <div class='container'>
+  <h3>Test Data Set Confusion Matrix:</h3>
+  <table width="20%">
+    {% for row in cm %}
+        <tr>
+        {% for cell in row %}
+            <td>{{ cell }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+  </table>
+  </div>
+
+  <p><p><p><p><p><p>
+
+    <div class='container'>
+      <h3>What would you like to do next?</h3>
+      <p><a href="{% url 'pred' %}">Make predictions from arbitrary text</a>
+      <p><p><p><p><p><p>
+      <p><a href="{% url 'home' %}">Start Over</a>
+    </div>
+
+ </body>
+</html>
