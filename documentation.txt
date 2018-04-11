@@ -52,5 +52,3 @@ The research.py file with the source code from the research is best run in an in
 Python session.  Bocks of code should be run as opposed to running the whole thing as
 a script.  It should be self explanatory and well documented.
 
-Please contact me at tcnelson@protonmail.com or call me at 609-462-6919 if you 
-have any questions.
