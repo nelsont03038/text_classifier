@@ -1,4 +1,0 @@
-numpy
-pandas
-sklearn
-Django==1.11.22
